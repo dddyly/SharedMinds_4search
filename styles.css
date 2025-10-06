@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', monospace;
+  overflow: hidden;
+  background: #000;
+}
+
+#sphere-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+.bar {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.bar.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.bar h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+#search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-width: 300px;
+}
+
+#search-form label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+#search-form input {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 2px solid #333;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+#search-form button {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+#search-form button:hover {
+  background: #333;
+}
